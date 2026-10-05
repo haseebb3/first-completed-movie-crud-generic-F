@@ -182,7 +182,7 @@ function onCreate(event) {
                   </h4>
                 </div>
               </div>
-              <small class="text-right pr-3">${newMovie.updatedAt ? `Updated at : ${new Date(newMovie.updatedAt).toLocaleString("en-IN")}` : `Created at : ${new Date(newMovie.createdAt).toLocaleString("en-IN")}`}</small>
+              <small class="text-left pl-3">${newMovie.updatedAt ? `Updated at : ${new Date(newMovie.updatedAt).toLocaleString("en-IN")}` : `Created at : ${new Date(newMovie.createdAt).toLocaleString("en-IN")}`}</small>
 
               <div class="card-body p-2" id="movie-cardBody">
                 <figure>
