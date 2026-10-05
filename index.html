@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <section>
+    <div class="header-section pt-5 d-flex justify-content-around align-items-center">
+      <a href="index.html">
+        <img src="./assets/images/AAAAAQ.svg" id="logo" alt="Logo" />
+      </a>
+      <div>
+        <button class="btn btn-sm pri-btn" id="modelButton">Add Movie</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container-fluid">
+      <div class="row mt-5" id="allMoviesContainer">
+        <!-- <div class="col-md-3" id="singleCardContainer">
+            <div class="card" id="movieCard">
+              <div class="card-header row">
+                <div class="col-10">
+                  <h3 id="movieTitle" class="m-0">DHOOM 3</h3>
+                </div>
+                <div class="col-2">
+                  <h4 class="badge badge-warning align-self-center p-2">
+                    <span>5</span>
+                  </h4>
+                </div>
+              </div>
+              <small class="text-right pr-3">Updated at : 01/01/2003</small>
+
+              <div class="card-body p-2" id="movie-cardBody">
+                <figure>
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc0-vpB31Vl9FbSXDjX76MmhwfTwfl7gos_IbIu96r3UEiFr3kSJsmMgMERguqOutLRlKT&s=10"
+                    alt="DHOOM 3"
+                  />
+
+                  <figcaption>
+                    <h3>DHOOM 3</h3>
+                    <h4>Genere : Sci-Fic</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Inventore adipisci, ducimus odio dicta quam quia assumenda
+                      dignissimos libero cupiditate. Debitis nobis veritatis
+                      mollitia laboriosam non dicta sint eaque nostrum
+                      consequuntur.
+                    </p>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="card-footer d-flex justify-content-between">
+                <button class="btn btn-sm sec-btn">Edit</button>
+                <button class="btn btn-sm pri-btn">Remove</button>
+              </div>
+            </div>
+          </div> -->
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="model d-none" id="model">
+      <div class="row">
+        <div class="col-md-12">
+          <form id="movieForm">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <h3 id="movieAddOrUpdate">Add Movie Details</h3>
+                <i role="button" class="fa-solid fa-xmark fa-2x text-danger close-model"></i>
+              </div>
+
+              <div class="card-body">
+                <div class="form-row">
+                  <div class="col-md-4 form-group">
+                    <label for="title">Movie Name</label>
+                    <input required type="text" id="title" class="form-control" />
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <label for="genre">Movie Genere</label>
+                    <select required id="genre" class="form-control text-primary">
+                      <option value="" disabled selected hidden>
+                        Choose Genere
+                      </option>
+                      <option value="Action">Action</option>
+                      <option value="Science Fiction (Sci-Fi)">
+                        Science Fiction (Sci-Fi)
+                      </option>
+                      <option value="Comedy">Comedy</option>
+                      <option value="Drama">Drama</option>
+                      <option value="Thriller">Thriller</option>
+                      <option value="Animation">Animation</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <label for="releaseDate">Movie Release Date</label>
+                    <input type="date" id="releaseDate" class="form-control text-primary" />
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="poster">Movie Image</label>
+                    <input required type="url" id="poster" class="form-control" />
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <label for="rating">Movie Rating</label>
+                    <select required id="rating" class="form-control">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+                  <div class="col-12 form-group">
+                    <label for="description">Movie Description</label>
+                    <textarea placeholder="Movie Description" id="description" rows="4" class="form-control"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer d-flex justify-content-between">
+                <button class="btn btn-sm sec-btn" id="addMovBtn">
+                  Add Movie
+                </button>
+                <button type="button" class="btn btn-sm sec-btn d-none" id="updateMovBtn">
+                  Update Movie
+                </button>
+                <button role="button" class="btn btn-sm pri-btn close-model">
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="backdrop close-model d-none" id="backDrop"></div>
+
+  <div class="d-none" id="spinner">
+    <button class="btn btn-primary" type="button" disabled>
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      Loading...
+    </button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
